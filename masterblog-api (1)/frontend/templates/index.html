@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterBlog API Client</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/style.css">
+    <title>MasterBlog</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>MasterBlog API Client</h1>
+        <h1>MasterBlog</h1>
 
-        <div class="input-field">
-            <input type="text" id="api-base-url" placeholder="Enter API Base URL" value="http://localhost:5002/api">
-            <button onclick="loadPosts()">Load Posts</button>
+        <div id="auth-section">
+            <form id="login-form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
         </div>
 
-        <div class="input-field">
-            <input type="text" id="post-title" placeholder="Post Title">
-            <input type="text" id="post-content" placeholder="Post Content">
-            <button onclick="addPost()">Add Post</button>
-        </div>
+        <div id="post-section" style="display: none;">
+            <form id="post-form">
+                <h2>Create New Post</h2>
+                <div class="input-group">
+                    <input type="text" id="post-title" placeholder="Title" required>
+                    <textarea id="post-content" placeholder="Content" required></textarea>
+                    <input type="text" id="post-tags" placeholder="Tags (comma separated)">
+                    <button type="submit">Create Post</button>
+                </div>
+            </form>
 
-        <div id="post-container">
-            <!-- Posts will be loaded here -->
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Search posts...">
+                <select id="sort-select">
+                    <option value="">Default</option>
+                    <option value="title">Title (A-Z)</option>
+                    <option value="title,desc">Title (Z-A)</option>
+                </select>
+                <button onclick="loadPosts()">Search</button>
+            </div>
+
+            <div id="post-container"></div>
+            <div id="pagination" class="pagination"></div>
         </div>
     </div>
 
-    <script src="static/main.js"></script>
+    <script src="/static/main.js"></script>
 </body>
 </html>

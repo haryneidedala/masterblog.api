@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MasterblogAPI.iml" filepath="$PROJECT_DIR$/.idea/MasterblogAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/masterblog-api (1)/.idea/masterblog-api (1).iml" filepath="$PROJECT_DIR$/masterblog-api (1)/.idea/masterblog-api (1).iml" />
     </modules>
   </component>
 </project>

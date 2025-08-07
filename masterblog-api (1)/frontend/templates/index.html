@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles.css">
+    <title>MasterBlog API Client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>📚 Blog Posts</h1>
+        <h1>MasterBlog API Client</h1>
+
         <div class="input-field">
-            <input type="text" id="api-base-url" placeholder="Enter API Base URL" value="http://127.0.0.1:5002/api">
+            <input type="text" id="api-base-url" placeholder="Enter API Base URL" value="http://localhost:5002/api">
             <button onclick="loadPosts()">Load Posts</button>
         </div>
+
         <div class="input-field">
-            <input type="text" id="post-title" placeholder="Enter Post Title">
-            <input type="text" id="post-content" placeholder="Enter Post Content">
+            <input type="text" id="post-title" placeholder="Post Title">
+            <input type="text" id="post-content" placeholder="Post Content">
             <button onclick="addPost()">Add Post</button>
         </div>
+
         <div id="post-container">
-            <!-- Blog posts will be inserted here by JavaScript -->
+            <!-- Posts will be loaded here -->
         </div>
     </div>
 
